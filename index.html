@@ -5,30 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="./Ícones/Group.png">
-  <title>Travel website</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Volkhov:wght@700&display=swap" rel="stylesheet">
+
+  <title>Jadoo Travel</title>
 </head>
 <body>
   <div class="container">
+    
+    <img class="background-decore" src="./Imagens/Decore.png" alt="">
+
     <header class="ParteSuperior">
-      <img class="Logo" src="./Ícones/Logo.png" alt="Logo">
+      <img class="Logo" src="./Ícones/Logo.png" alt="Logo Jadoo">
       <nav class="Items">
         <a class="Item" href="#">Destinations</a>
         <a class="Item" href="#">Hotels</a>
         <a class="Item" href="#">Flights</a>
         <a class="Item" href="#">Bookings</a>
+        <a class="Item" href="#">Login</a>
+        <button class="SignUp">Sign up</button>
+        <div class="language-selector">
+          <span class="Idioma">EN</span>
+          <img class="Vetor" src="./Ícones/Vector.png" alt="Selecionar idioma">
+        </div>
       </nav>
     </header>
-    <div class="ParteCentral">
-      <img class="ImagemCentral" src="Imagens/Traveller.png" alt="Imagem Central">
-      <img class="Imagem" src="Imagens/Decore.png" alt="Imagem Decorativa">
-      <h2 class="Titulo">Best Destinations around the world</h2>
-      <h1 class="Titulo2">Travel, enjoy and live a new and full life</h1>
-      <p class="Texto">
-        Built Wicket longer admire do barton vanity itself do in it. Preferred 
-        to sportsmen it engrossed listening. Park gate sell they west hard for the.
-      </p>
-    </div>
+    
+    <section class="ParteCentral">
+      <div class="TextoBox">
+        <h2 class="Titulo">Best Destinations around the world</h2>
+        <h1 class="Titulo2">Travel, <span class="highlight">enjoy</span> and live a new and full life</h1>
+        <p class="Texto">
+          Built Wicket longer admire do barton vanity itself do in it. Preferred 
+          to sportsmen it engrossed listening. Park gate sell they west hard for the.
+        </p>
+
+        <div class="Botoes">
+          <button class="Botao">Find out more</button>
+          <div class="PlayDemo">
+            <button class="play-button" aria-label="Play Demo"></button>
+            <span>Play Demo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ImagemBox">
+        <img class="plane-1" src="./Ícones/plane.png" >
+        <img class="plane-2" src="./Ícones/plane.png" >
+        <img class="ImagemCentral" src="./Imagens/Traveller.png">
+      </div>
+    </section>
 
   </div>
 </body>
 </html>
+
+
+

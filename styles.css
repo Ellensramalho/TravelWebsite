@@ -4,86 +4,249 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-text: #212832;
+    --brand-orange: #DF6951;
+    --brand-yellow: #F1A501;
+    --brand-blue: #181E4B;
+    --secondary-text: #5E6282;
+    --white: #FFFFFF;
+}
+
 body {
-    background-color: #ffffff;
+    background-color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+
+}
+
+.container {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.background-decore {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;  
+    height: auto;
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+.ParteSuperior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px 0;
 }
 
 .Logo {
-    width: 114.91px;
-    height: 33.99px;
-    flex-shrink: 0;
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
-    padding: 0;
-    border: none;
-    margin-top: 1.7px;
-    margin-right: 1046px;
-    margin-bottom: 4.31px;
-    margin-left: 141px;
-    box-sizing: border-box;
+    width: 115px;
+    height: auto;
 }
 
 .Items {
-    gap: 55px;
+    display: flex;
+    align-items: center;
+    gap: 45px;
 }
 
 .Item {
-    color: var(--1st, #212832);
-    font-family: "Google Sans";
+    color: var(--primary-text);
     font-size: 17px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.Item:hover {
+    color: var(--brand-orange);
+}
+
+.SignUp {
+    padding: 9px 22px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-text);
+    background-color: transparent;
+    color: var(--primary-text);
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.SignUp:hover {
+    background-color: var(--primary-text);
+    color: var(--white);
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.Idioma {
+    color: var(--primary-text);
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.Vetor {
+    width: 9px;
+    height: auto;
 }
 .ParteCentral {
-  position: relative; 
+    display: grid;
+    grid-template-columns: 45% 55%; 
+    align-items: center;
+    padding: 50px 100px;
+    gap: 30px;
 }
-.ImagemCentral {
-    flex-shrink: 0;
-    width: 765px;
-    height: 764px;
-    margin-left: 585px;
 
-
+.TextoBox {
+    max-width: 540px;
 }
-.Imagem{
-    width: 766px;
-    height: 872px;
-    flex-shrink: 0;
 
-
-}
 .Titulo {
-    color: #DF6951;
-    font-family: Poppins;
+    color: var(--brand-orange);
     font-size: 20px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
     text-transform: uppercase;
-    width: 410px;
-    height: 30px;
-    margin-top: 217px;
+    margin-bottom: 24px;
 }
 
 .Titulo2 {
-    color: var(--1st, #181E4B);
-    font-family: Volkhov;
+    font-family: 'Volkhov', serif;
+    color: var(--brand-blue);
     font-size: 84px;
-    font-style: normal;
     font-weight: 700;
     line-height: 89px;
     letter-spacing: -3.36px;
-    width: 545px;
-    height: 267px;
+    margin-bottom: 30px;
+}
+
+.highlight {
+    position: relative;
+    z-index: 1;
+}
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: -5px;
+    right: -5px;
+    height: 15px;
+    background: rgba(223, 105, 81, 0.6); 
+    border-radius: 6px;
+    z-index: -1;
 }
 
 .Texto {
-    color: #5E6282;
-    font-family: Poppins;
+    color: var(--secondary-text);
     font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 30px;
-    width: 477px;
-    height: 90px;
+    margin-bottom: 34px;
+    max-width: 480px;
+}
+
+.Botoes {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+}
+
+.Botao {
+    width: 170px;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    background: var(--brand-yellow);
+    box-shadow: 0 20px 35px rgba(241, 165, 1, 0.15);
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.Botao:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 25px 40px rgba(241, 165, 1, 0.25);
+}
+
+.PlayDemo {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    color: #686D77;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.play-button {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    background: var(--brand-orange);
+    box-shadow: 0 15px 30px rgba(223, 105, 81, 0.30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+.play-button::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid white;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 35px rgba(223, 105, 81, 0.40);
+}
+
+.ImagemBox {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ImagemCentral {
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+}
+
+.plane-1 {
+    position: absolute;
+    top: 5%;
+    left: 18%;
+    width: 140px;
+    transform: rotate(-8deg);
+}
+
+.plane-2 {
+    position: absolute;
+    top: 8%;
+    right: -5%;
+    width: 150px;
+    transform: rotate(5deg);
 }
